@@ -61,9 +61,7 @@ class Dashboard extends React.Component{
                         ))}
                     </Switch>
                 </div>
-
                 <NavLinkBar data={navList}/>
-
             </div>
         )
 

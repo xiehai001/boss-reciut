@@ -39,9 +39,10 @@ Router.post('/login',function (req,res) {
    });
 });
 Router.get('/list',function (req,res) {
-    // UserModel.remove({},function (err,doc) {});
-    UserModel.find({},function (err,doc) {
-        return res.json(doc);
+    const {type} = req.query;
+
+    UserModel.find({type},function (err,doc) {
+        return res.json({code:0,data:doc});
     });
 });
 Router.get('/info',function (req,res) {

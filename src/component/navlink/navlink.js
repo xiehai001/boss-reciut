@@ -9,11 +9,8 @@ class NavLinkBar extends React.Component{
         data: PropTypes.array.isRequired
     };
     render(){
-
         const navList = this.props.data.filter(v=>!v.hide);
         const {pathname} = this.props.location;
-        console.log(pathname);
-        console.log(navList);
         return (
             <TabBar>
                 {navList.map(v=>(
